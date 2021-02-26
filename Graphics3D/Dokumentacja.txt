@@ -1,0 +1,53 @@
+﻿Program umożliwia rendering 3 brył: sfery, sześcianu i prostopadłościanu. 
+
+### USER MANUAL:
+
+Phong light - ustawenia parametrów oświetlenia Phong'a
+Ia - kolor światła otoczenia
+ka - współczynniki odbcia światła otoczenia
+Ip - kolor światła punktowego
+ks - współczynnik odbicia światła kierunkowego
+kd - współczynnik odbicia światła rozproszonego 
+n - współczynnik gładkości powierzchi
+
+Light - ustawienia współrzędnych źródła światła stałego
+
+Shading - wybór rodzaju cieniowania (płaskie, Gouroud, Phonga)
+
+Sphere - możliwość zmiany podziału siatki sfery 
+
+Opcja 'Show Only Curves,: zaznaczenie powoduje narysowanie tylko krawędzi brył
+Opcja 'Rotate Cube': włącza i wyłącza obracanie sześcianu
+Opcja 'Mobile Object': włącza i wyłącza poruszanie się obiekt z którym związane jest ruchome światło i kamera
+
+
+Camera Type - wybór rodzaju kamery
+Static: nieruchoma obserwująca scenę,
+Move: związana z ruchomym obiektem,
+Follow: nieruchoma śledząca ruchomy obiekt
+
+Static Camera - ustawienie parametrów lokalizacji dla kamery statycznej
+Camera Target - ustawienie parametrów lokalizacji punktu na który patrzy kamera statyczna
+
+Render - przycisk służący do renderowania sceny (jeśli wszystkie obiekty pozostają nieruchome)
+
+### PRZYJĘTE ROZWIĄZANIA TECHNICZNE
+
+pozycja środka sfery: [-1, 1, 0] (wsp. świata)
+pozycja startowa sześcianu: [-1, 1, 0] (wsp. świata)
+pozycja ruchomego obietku: [-1, -1, 0] (wsp. świata)
+
+Wektor Up w kamerze: [0, 1, 0]
+
+Ruchome światło: kolor biały
+
+Przyjęte parametry w macierzy projekcji:
+n = 0.1;
+f = 100;
+fov = 45 stopni;
+
+Sześcian obraca się w okół osi OZ
+Ruchomy obiekt porusza się wzdłuż osi OY
+
+Timer interval ustawiony na 100ms
+
